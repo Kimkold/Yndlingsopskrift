@@ -1,24 +1,49 @@
 h1 {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
 }
-
-article {
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "left middle right"
+    "footer footer footer";
+  grid-template-rows: 25vh 50vh 25vh;
+}
+header {
+  grid-area: header;
+  text-align: center;
+  font-style: italic;
+}
+.left {
+  grid-area: left;
   background-color: beige;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
-  text-align: left;
-  width: 50%;
+  text-align: center;
+  max-width: 50%;
 }
-aside {
-  background-color: lightblue;
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
-  text-align: left;
-  width: 50%;
+.middle {
+  grid-area: middle;
+  align-content: center;
 }
-.text {
-  width: 50%;
+.right {
+  grid-area: right;
+  background-color: burlywood;
+  text-align: center;
+  padding-right: 10%;
+}
+footer {
+  grid-area: footer;
+  text-align: center;
+  font-style: italic;
+}
+ol {
+  text-align: center;
+  list-style-position: inside;
 }
